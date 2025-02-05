@@ -4,7 +4,7 @@ export const useMainStore = defineStore("main", {
   state: () => ({
     message: "Hola desde Pinia!",
     token: "patata",
-    nombre: "Juanma",
+    nombre: "",
   }),
   actions: {
     setMessage(newMessage) {

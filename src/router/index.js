@@ -36,9 +36,9 @@ const router = createRouter({
       ],
     },
     {
-      path: "/home",
-      name: Home,
-      component: () => import("@/views/Home.vue"),
+      path: "/organigrama",
+      name: Login,
+      component: () => import("@/views/Organigrama.vue"),
       children: [
         // {
         //   path: "/altaUsuario",

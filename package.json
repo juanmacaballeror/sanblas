@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@primevue/auto-import-resolver": "^4.2.5",
     "@quasar/extras": "^1.16.16",
     "axios": "^1.7.9",
     "pinia": "^2.3.1",
     "quasar": "^2.17.7",
+    "treant-js": "^1.0.1",
     "vue": "^3.5.13",
     "vue-i18n": "^9.13.1",
     "vue-router": "^4.5.0"

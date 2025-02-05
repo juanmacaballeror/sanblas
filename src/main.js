@@ -1,6 +1,6 @@
 // FILE: main.js
 
-import { createApp } from "vue";
+import { createApp, provide } from "vue";
 import { Quasar } from "quasar";
 import quasarLang from "quasar/lang/es";
 import router from "./router";
@@ -32,11 +32,10 @@ import "@quasar/extras/animate/fadeOut.css";
 // Import Quasar css
 import "quasar/dist/quasar.css";
 
-// Assumes your root component is App.vue
-// and placed in same folder as main.js
 import App from "./App.vue";
 
 const app = createApp(App);
+
 app.use(router);
 app.use(createPinia());
 
