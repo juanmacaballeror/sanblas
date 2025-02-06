@@ -4,20 +4,20 @@ import OrgNode from "./orgNode.vue"; // Importamos el componente recursivo
 
 // Datos del organigrama
 const orgData = ref({
-  name: "CEO",
-  title: "Director General",
+  cargo: "Hermano Mayor",
+  name: "Juan Perez Fernández",
   children: [
     {
-      name: "CTO",
-      title: "Director de Tecnología",
+      cargo: "Hermano Medio",
+      name: "Antonio Pérez Pérez",
     },
     {
-      name: "CFO",
-      title: "Director Financiero",
+      cargo: "Hermano Medio",
+      name: "Mario Sanchez Sanchez",
     },
     {
-      name: "CMO",
-      title: "Director de Marketing",
+      cargo: "Hermano Medio",
+      name: "Juanjo Díaz Diaz",
     },
   ],
 });

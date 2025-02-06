@@ -10,8 +10,8 @@ defineProps({
 <template>
   <div class="node">
     <div class="node-content">
-      <div class="node-name">{{ node.name }}</div>
-      <div class="node-title">{{ node.title }}</div>
+      <div class="node-name">{{ node.cargo }}</div>
+      <div class="node-title">{{ node.name }}</div>
     </div>
     <div v-if="node.children && node.children.length" class="children">
       <OrgNode
@@ -30,7 +30,7 @@ defineProps({
   align-items: center;
   position: relative;
   margin: 10px;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 .node-content {
@@ -52,6 +52,7 @@ defineProps({
   display: flex;
   justify-content: center;
   margin-top: 4rem;
+
   position: relative;
 }
 
@@ -63,9 +64,6 @@ defineProps({
   .children {
     flex-direction: column;
     align-items: center;
-  }
-  .node {
-    margin-top: 4rem;
   }
 }
 </style>
