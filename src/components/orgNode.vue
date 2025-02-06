@@ -28,9 +28,10 @@ defineProps({
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
-  margin: 10px;
-  margin-top: 6rem;
+  margin: 50px;
+  align-items: stretch;
 }
 
 .node-content {
@@ -52,7 +53,6 @@ defineProps({
   display: flex;
   justify-content: center;
   margin-top: 4rem;
-
   position: relative;
 }
 

@@ -19,6 +19,10 @@ const orgData = ref({
       cargo: "Hermano Medio",
       name: "Juanjo Díaz Diaz",
     },
+    {
+      cargo: "Hermano Medio",
+      name: "David Carvajal Diaz",
+    },
   ],
 });
 </script>
@@ -34,6 +38,12 @@ const orgData = ref({
   display: flex;
   justify-content: center;
   padding: 20px;
-  overflow-x: auto;
+  height: 70vh;
+}
+
+@media (max-width: 768px) {
+  .tree-container {
+    height: 90vh;
+  }
 }
 </style>
