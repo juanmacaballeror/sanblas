@@ -1,7 +1,6 @@
 <script setup>
 import { defineProps } from "vue";
 
-// Recibir el nodo de datos como una prop
 defineProps({
   node: Object,
 });

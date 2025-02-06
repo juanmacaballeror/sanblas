@@ -1,8 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import OrgNode from "./orgNode.vue"; // Importamos el componente recursivo
+import OrgNode from "./orgNode.vue";
 
-// Datos del organigrama
 const orgData = ref({
   cargo: "Hermano Mayor",
   name: "Juan Perez Fernández",
@@ -46,4 +45,10 @@ const orgData = ref({
     height: 90vh;
   }
 }
+
+/* @media (max-width: 400px) {
+  .tree-container {
+    height: 130vh;
+  }
+} */
 </style>

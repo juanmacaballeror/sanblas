@@ -105,9 +105,14 @@ const setActive = (link) => {
 <style scoped>
 .alignToolbarTitleDesktop {
   text-align: left;
+  white-space: normal;
+  word-break: break-word;
 }
 .alignToolbarTitleMovil {
+  white-space: normal;
+  word-break: break-word;
   text-align: center;
+  max-width: 100%;
 }
 
 .backGroundColor {
