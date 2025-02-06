@@ -35,6 +35,11 @@ if (nombre?.value) {
 } else {
   menuItems.push({ label: "Login", icon: "login", link: "/login" });
 }
+
+const activeLink = ref(null);
+const setActive = (link) => {
+  activeLink.value = link;
+};
 </script>
 
 <template>
@@ -64,12 +69,15 @@ if (nombre?.value) {
         <!-- Menú horizontal en escritorio -->
         <div class="q-mt-xs" v-if="$q.screen.gt.sm">
           <q-btn
-            v-for="item in menuItems"
+            v-for="(item, index) in menuItems"
             :key="item.label"
             flat
             :icon="item.icon"
             :label="item.label"
             :to="item.link"
+            class="custom-link"
+            :class="{ active: activeLink === index }"
+            @click="setActive(index)"
           />
         </div>
       </q-toolbar>
@@ -115,5 +123,11 @@ if (nombre?.value) {
   border-radius: 50%;
   aspect-ratio: 1; /* Se ajusta al mismo valor que el width */
   object-fit: cover;
+}
+
+.custom-link.active {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
 }
 </style>

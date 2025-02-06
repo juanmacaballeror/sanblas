@@ -30,6 +30,7 @@ defineProps({
   align-items: center;
   position: relative;
   margin: 10px;
+  margin-top: 2rem;
 }
 
 .node-content {
@@ -39,7 +40,6 @@ defineProps({
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  min-width: 120px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -51,14 +51,21 @@ defineProps({
 .children {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 4rem;
   position: relative;
+}
+
+.children .node-content {
+  background: orange;
 }
 
 @media (max-width: 768px) {
   .children {
     flex-direction: column;
     align-items: center;
+  }
+  .node {
+    margin-top: 4rem;
   }
 }
 </style>
