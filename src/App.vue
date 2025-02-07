@@ -17,8 +17,8 @@ import footerComponent from "@components/footerComponent.vue";
 
 <style scoped>
 .no-scroll {
-  overflow: hidden;
-  height: 100vh;
+  /* overflow: hidden;
+  height: 100vh; */
 }
 </style>
 

@@ -2,12 +2,12 @@
 import { useMainStore } from "@store/index.js";
 import { ref, computed } from "vue";
 import { useQuasar } from "quasar";
-import { storeToRefs } from "pinia"; // Permite extraer propiedades reactivas
+import { storeToRefs } from "pinia";
 
 const $q = useQuasar();
-const drawer = ref(false); // Estado del menú lateral
+const drawer = ref(false);
 
-const mainStore = useMainStore(); // Obtiene la store
+const mainStore = useMainStore();
 
 // Extraer `token  nombre` de la store (para mantener reactividad)
 const { token, nombre } = storeToRefs(mainStore);
@@ -27,10 +27,11 @@ const menuItems = [
   { label: "Inicio", icon: "home", link: "/" },
   { label: "Organigrama", icon: "mail", link: "/organigrama" },
   { label: "Galería", icon: "image", link: "/galeria" },
-  { label: "Contacto", icon: "mail", link: "/contacto" },
+  // { label: "Contacto", icon: "mail", link: "/contacto" },
 ];
 
 if (nombre?.value) {
+  menuItems.push({ label: "Gestión", icon: "list", link: "/gestion" });
   menuItems.push({ label: nombre.value, icon: "login", link: "/datosUsuario" });
 } else {
   menuItems.push({ label: "Login", icon: "login", link: "/login" });

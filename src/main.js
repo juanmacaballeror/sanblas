@@ -1,11 +1,13 @@
 // FILE: main.js
 
-import { createApp, provide } from "vue";
+import { createApp } from "vue";
 import { Quasar } from "quasar";
 import quasarLang from "quasar/lang/es";
 import router from "./router";
 import { createPinia } from "pinia";
 import "./styles/index.scss";
+
+import { ROUTER_NAMES } from "@/utils/routerNames";
 
 // Import icon libraries
 import "@quasar/extras/roboto-font-latin-ext/roboto-font-latin-ext.css";
@@ -55,6 +57,9 @@ app.use(Quasar, {
   }
   */
 });
+
+//Hace global ROUTES_NAMES con this.$ROUTER_NAMES para poder navegar entre vistas
+app.config.globalProperties.$ROUTER_NAMES = ROUTER_NAMES;
 
 // Assumes you have a <div id="app"></div> in your index.html
 app.mount("#app");
